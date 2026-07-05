@@ -3,91 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>课程作业主页</title>
+    <title>数据分析课程作业 | 学生压力预测</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: "Microsoft YaHei", sans-serif;
-            background: #f0f2f5;
-            padding: 40px 20px;
-        }
-        .wrapper {
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 30px;
+            font-family: "Microsoft YaHei",sans-serif;
+            background:#f7f9fc;
         }
-        .card {
-            background: white;
-            padding: 35px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
+        h1,h2{color:#223355;}
+        .box{
+            background:#fff;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:25px;
+            box-shadow:0 1px 6px #ddd;
         }
-        .card h2 {
-            color: #1a73e8;
-            margin-bottom: 25px;
-            font-size: 22px;
+        img{
+            width:90%;
+            margin:10px auto;
+            display:block;
+            border:1px #eee solid;
+            border-radius:6px;
         }
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin: 12px 0;
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .row:last-child {
-            border-bottom: none;
-        }
-        .label {
-            color: #666;
-            font-weight: 500;
-        }
-        .value {
-            color: #333;
-            font-weight: bold;
-        }
-        .link-btn {
-            display: block;
-            text-align: center;
-            margin-top: 30px;
-            padding: 14px;
-            background: #1a73e8;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .link-btn:hover {
-            background: #1557b0;
+        a{
+            color:#0066cc;
+            font-size:18px;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="card">
-            <h2>📚 Python数据分析课程作业</h2>
-            <div class="row">
-                <span class="label">姓名</span>
-                <span class="value">张三</span>
-            </div>
-            <div class="row">
-                <span class="label">学号</span>
-                <span class="value">20250001</span>
-            </div>
-            <div class="row">
-                <span class="label">课程名称</span>
-                <span class="value">Python数据分析与应用</span>
-            </div>
-            <div class="row">
-                <span class="label">分析数据来源</span>
-                <span class="value">临床医学PIC数据库</span>
-            </div>
-            <a href="ehk.pdf" class="link-btn">📄 点击查看数据分析报告PDF</a>
-        </div>
+    <div class="box">
+        <h1>课程数据分析作业展示</h1>
+        <p>姓名：XXX &nbsp;&nbsp; 学号：XXX</p>
+        <p>数据集：student_stress_sleep_screen 学生睡眠、屏幕时长与压力数据</p>
+        <p>完整分析PDF报告：<a href="课程报告.pdf">点击下载</a></p>
+    </div>
+
+    <div class="box">
+        <h2>1 特征相关性热力图</h2>
+        <img src="corr_heatmap.png" alt="相关性热力图">
+        <p>结论：睡眠时间与压力负相关，屏幕时长与压力正相关</p>
+    </div>
+
+    <div class="box">
+        <h2>2 不同压力下睡眠、屏幕时长分布</h2>
+        <img src="sleep_stress_box.png" alt="睡眠箱线图">
+        <img src="screen_stress_box.png" alt="屏幕时长箱线图">
+    </div>
+
+    <div class="box">
+        <h2>3 学生压力等级分布</h2>
+        <img src="stress_pie.png" alt="压力分布饼图">
+    </div>
+
+    <div class="box">
+        <h2>4 随机森林模型混淆矩阵</h2>
+        <img src="confusion_matrix.png" alt="混淆矩阵">
+    </div>
+
+    <div class="box">
+        <h2>5 特征重要性排序</h2>
+        <img src="feature_importance.png" alt="特征重要性">
+        <p>屏幕时长、睡眠时间是预测压力的两大核心特征</p>
     </div>
 </body>
 </html>
